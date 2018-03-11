@@ -193,7 +193,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         <h3>  Formulario de envio </h3>
 
-        <form id='formulario' method='post'>
+        <form id='formulario' method='post' >
 
             <label> Nombre </label>
             <br>
@@ -255,7 +255,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="cart_totals">
     <?php $crud->carrotabla(); ?>
 </div>
-
 
 
 
