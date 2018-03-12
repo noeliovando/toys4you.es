@@ -37,11 +37,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="js/jquery.etalage.min.js"></script>
     <!-- Include the Etalage files -->
 
+
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="http://demos.wpexpand.com/html/eElectronics/css/owl.carousel.css">
     <link rel="stylesheet" href="http://demos.wpexpand.com/html/eElectronics/style.css">
     <link rel="stylesheet" href="http://demos.wpexpand.com/html/eElectronics/css/responsive.css">
-
 
     <script>
         jQuery(document).ready(function($){
@@ -169,95 +170,79 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             });
         });
     });
-
-
-
 </script>
 
 
+<div id='articulos'>
 
 
+    <div class="single-product-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+            <div class="row">
 
+                <div class="col-md-8">
+                    <div class="product-content-right">
+                        <div class="woocommerce">
+                            <table cellspacing="0" class="shop_table cart">
+                                <tbody>
+                                <tr>
+                                    <td class="actions" colspan="6">
+                                        <div id="myWatch4"></div>
+                                        <?php $crud->borrar(); ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="actions" colspan="6">
+                                        <div class="coupon">
 
-<div id='articulos' style=Width:24%;float:left;margin-left:1%;margin-right:1%;>
+                                        </div>
+                                        <h3>  Formulario de envio </h3>
 
-    <h2>Articulos seleccionados </h2>
+                                        <form id='formulario' method='post'>
+                                            <label> Nombre </label>
+                                            <br>
+                                            <input type='text' name='nombre' class='form-control' placeholder='Ingresar nombre..'>
+                                            <br>
+                                            <label> Direccion</label>
+                                            <br>
+                                            <input type='text' name='direccion'  id="mapsearch" name='direccion'  size="50"   class='form-control' placeholder='Ingresar direccion..'>
+                                            <br>
+                                            <label> Email </label>
+                                            <br>
+                                            <input type='text' name='correo' class='form-control' placeholder='Ingresar email..'>
+                                            <br>
+                                            <label> Telefono</label>
+                                            <br>
+                                            <input type='text' name='telefono' class='form-control' placeholder='Ingresar telefono..'>
+                                            <br>
+                                            <label> Cupon de regalo (opcional)</label>
+                                            <br>
+                                            <input type='text' name='cupon' class='form-control' placeholder='Ingresar codigo de cupon..'>
+                                            <br>
+                                            <br>
+                                            <div class='col-md-12'>
+                                                <hr>
+                                                <div class="cart_totals">
+                                                    <?php $crud->carrotabla(); ?>
+                                                </div>
+                                            </div>
+                                            <br><br>
+                                            <input type='button'  id='btn-ingresar' class='btn btn-default' value='Enviar' />
+                                        </form>
+                                        <div id='resp'></div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
 
-
-    <?php $crud->carro2(); ?>
-
-
-    <div id='borde'>
-
-        <br>
-
-        <h3>  Formulario de envio </h3>
-
-        <form id='formulario' method='post' >
-
-            <label> Nombre </label>
-            <br>
-            <input type='text' name='nombre' class='form-control' placeholder='Ingresar nombre..'>
-
-            <br>
-
-
-            <label> Direccion</label>
-            <br>
-            <input type='text' name='direccion'  id="mapsearch" name='direccion'  size="50"   class='form-control' placeholder='Ingresar direccion..'>
-
-            <br>
-
-
-            <label> Email </label>
-            <br>
-            <input type='text' name='correo' class='form-control' placeholder='Ingresar email..'>
-
-            <br>
-
-            <label> Telefono</label>
-            <br>
-            <input type='text' name='telefono' class='form-control' placeholder='Ingresar telefono..'>
-
-            <br>
-
-            <label> Cupon de regalo (opcional)</label>
-            <br>
-            <input type='text' name='cupon' class='form-control' placeholder='Ingresar codigo de cupon..'>
-
-            <br>
-
-            <input type='button'  id='btn-ingresar' class='btn btn-default' value='Enviar' />
-
-
-        </form>
-
-        <div id='resp'></div>
-
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
-
-
-
 </div>
-
-</div>
-</div>
-
-
-
-<div id="myWatch4"></div>
-<?php $crud->borrar(); ?>
-
-
-<div class="cart_totals">
-    <?php $crud->carrotabla(); ?>
-</div>
-
-
-
 
 <div style=width:100%;float:left;><h1 div style=margin-left:5%;> Otros productos  </h1></div>
 

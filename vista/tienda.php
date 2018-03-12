@@ -15,9 +15,9 @@ if(isset($_GET['pg'])){}else{header('location:?vista=tienda.php&pg=1');}
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</script>
-		<!----webfonts---->
+		<!--webfonts-->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
-		<!----//webfonts---->
+		<!--//webfonts-->
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>

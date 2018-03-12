@@ -633,7 +633,7 @@ Para poder cancelar los productos debes dirigirte al carro de compras donde podr
         $this->ip=$_SERVER['REMOTE_ADDR'];
         $this->carro=mysql_query("SELECT *FROM compras  WHERE usuario='".$this->ip."'  AND enviado!='1' ",$this->db_conexion);
 
-        $this->acum=0;
+        $this->acum=0.0;
         $this->num=mysql_num_rows($this->carro);
 
         $totalNeto = $totalVolumen = 0;
@@ -659,13 +659,14 @@ Para poder cancelar los productos debes dirigirte al carro de compras donde podr
 
         $subTotal = $this->acum;
 
-        $portesPeso = ( $totalNeto > $totalVolumen ? $totalNeto : $totalVolumen );
+        //$portesPeso = ( $totalNeto > $totalVolumen ? $totalNeto : $totalVolumen );
+        $portesPeso =4.5;
 
         $this->acum +=0;
 
         $iva=$this->acum*0.21;
 
-        $this->acum +=$iva;
+        $this->acum +=$iva+$portesPeso;
 
         echo "
    <table cellspacing='0'>
@@ -682,8 +683,8 @@ Para poder cancelar los productos debes dirigirte al carro de compras donde podr
                                         </tr>
 
                                           <tr class='cart-subtotal'>
-                                            <th>Portes(".$portesPeso."Kg)<input type=\"hidden\" value=\"".$portesPeso."\" id=\"portesPeso\" /></th>
-                                            <td><span class='amount' id=\"portesDiv\">€ 0,00</span></td>
+                                            <th>Portes(".$portesPeso.")<input type=\"hidden\" value=\"".$portesPeso."\" id=\"portesPeso\" /></th>
+                                            <td><span class='amount' id=\"portesDiv\">€ ".$portesPeso."</span></td>
                                         </tr>
 
 

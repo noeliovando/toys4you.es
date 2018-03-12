@@ -93,7 +93,15 @@ $this->cupon=mysql_query("SELECT * FROM  cupon WHERE codigo='$cupon' ",$this->db
 
 $this->numcu=mysql_num_rows($this->cupon);
 
-if($cupon==''){ $this->suma=$this->acum; echo "<strong> Total : </strong>  &#8364; ".$this->acum." <br>"; } else{
+if($cupon==''){
+    $portesPeso =4.5;
+
+    $iva=$this->acum*0.21;
+
+    $this->acum +=$iva+$portesPeso;
+    $this->suma=$this->acum;
+
+    echo "<strong> Total : </strong>  &#8364; ".$this->acum." <br>"; } else{
 
 if($this->numcu>0){
 $this->cow=mysql_fetch_array($this->cupon);
@@ -103,6 +111,7 @@ $this->porcentaje=$this->cow['porcentaje'];
 $this->descuento=$this->porcentaje/100*$this->acum;
 
 $this->suma=$this->acum-$this->descuento;
+
 
 echo "<strong> Total : </strong>  &#8364; ".$this->acum." <br>";
 echo "<strong> Descuento : </strong> &#8364; ".$this->suma." <br>";
